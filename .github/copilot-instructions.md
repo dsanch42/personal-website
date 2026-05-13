@@ -1,0 +1,13 @@
+- [x] Verify that the copilot-instructions.md file in the .github directory is created.
+- [x] Clarify Project Requirements (Vite + React + TypeScript for professional personal website).
+- [x] Scaffold the Project (manual scaffold used because Node/npm tooling is blocked in environment).
+- [x] Customize the Project (About, Accomplishments, Resume upload/download, Contact).
+- [x] Install Required Extensions (no required extensions from setup info).
+- [x] Compile the Project (attempted; blocked because Node/npm is not installed and winget is policy-disabled).
+- [x] Create and Run Task (created .vscode/tasks.json task; execution blocked by missing npm).
+- [x] Launch the Project (not launched for same blocker: npm unavailable).
+- [x] Ensure Documentation is Complete (README added; this file cleaned of HTML comments).
+
+- Work through each checklist item systematically.
+- Keep communication concise and focused.
+- Follow development best practices.
