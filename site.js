@@ -37,4 +37,18 @@
   } else {
     revealEls.forEach(function (el) { el.classList.add("visible"); });
   }
+
+  var yearGroups = document.querySelectorAll("#accomplishments .year-group");
+  yearGroups.forEach(function (group) {
+    group.addEventListener("toggle", function () {
+      if (!group.open) {
+        return;
+      }
+      yearGroups.forEach(function (otherGroup) {
+        if (otherGroup !== group && otherGroup.open) {
+          otherGroup.open = false;
+        }
+      });
+    });
+  });
 })();
