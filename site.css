@@ -328,6 +328,31 @@ button:hover,
   gap: 0.7rem;
 }
 
+.company-groups {
+  margin-top: 0.8rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.company-group {
+  border: 1px solid #334155;
+  border-radius: 12px;
+  background: #0b1324;
+  padding: 0.75rem;
+}
+
+.company-group .year-groups {
+  margin-top: 0.55rem;
+}
+
+.company-heading {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .year-group {
   border: 1px solid #334155;
   border-radius: 10px;
@@ -719,6 +744,15 @@ body.light-theme .year-group {
   border-color: #c6d3e4;
 }
 
+body.light-theme .company-group {
+  background: #f8fbff;
+  border-color: #c6d3e4;
+}
+
+body.light-theme .company-heading {
+  color: #334155;
+}
+
 body.light-theme .impact-year {
   background: #eef4fd;
   border-color: #c6d3e4;
@@ -869,6 +903,10 @@ body.light-theme .exp-dates {
 
   .year-summary {
     padding: 0.68rem;
+  }
+
+  .company-group {
+    padding: 0.62rem;
   }
 
   .year-group .year-projects {
