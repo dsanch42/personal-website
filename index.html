@@ -28,31 +28,30 @@
     <link rel="stylesheet" href="./site.css" />
   </head>
   <body>
+    <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Switch theme">
+      <span class="theme-icon" aria-hidden="true">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <line x1="12" y1="2" x2="12" y2="5"></line>
+          <line x1="12" y1="19" x2="12" y2="22"></line>
+          <line x1="2" y1="12" x2="5" y2="12"></line>
+          <line x1="19" y1="12" x2="22" y2="12"></line>
+          <line x1="4.9" y1="4.9" x2="7" y2="7"></line>
+          <line x1="17" y1="17" x2="19.1" y2="19.1"></line>
+          <line x1="4.9" y1="19.1" x2="7" y2="17"></line>
+          <line x1="17" y1="7" x2="19.1" y2="4.9"></line>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
+        </svg>
+      </span>
+    </button>
     <div class="site-shell">
       <header class="hero" id="top">
         <div class="hero-inner">
           <div class="hero-text">
             <p class="eyebrow">Field IT Support Supervisor</p>
             <h1>David Sanchez</h1>
-            <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Switch theme">
-              <span class="theme-icon" aria-hidden="true">
-                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <line x1="12" y1="2" x2="12" y2="5"></line>
-                  <line x1="12" y1="19" x2="12" y2="22"></line>
-                  <line x1="2" y1="12" x2="5" y2="12"></line>
-                  <line x1="19" y1="12" x2="22" y2="12"></line>
-                  <line x1="4.9" y1="4.9" x2="7" y2="7"></line>
-                  <line x1="17" y1="17" x2="19.1" y2="19.1"></line>
-                  <line x1="4.9" y1="19.1" x2="7" y2="17"></line>
-                  <line x1="17" y1="7" x2="19.1" y2="4.9"></line>
-                </svg>
-                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
-                </svg>
-              </span>
-              <span id="theme-label">Switch to Light Theme</span>
-            </button>
             <nav class="hero-nav">
               <a href="#about">About</a>
               <a href="#accomplishments">Accomplishments</a>
@@ -85,12 +84,30 @@
             I bring a metrics-first mindset to everything I manage, from SLA compliance and
             device lifecycle planning to onboarding programs and cross-functional initiatives.
           </p>
+          <div class="stats-strip">
+            <div class="stat-item">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Years in IT</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">17</span>
+              <span class="stat-label">Direct Reports</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">1,327</span>
+              <span class="stat-label">Assets Remediated</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">6</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+          </div>
         </section>
 
         <section id="resume" class="card reveal delay-1">
           <h2>Resume</h2>
           <p class="section-copy">Download my current resume file.</p>
-          <a class="download-btn" href="./assets/David%20Sanchez_Resume_UPDATE.docx" download="David_Sanchez_Resume.docx">Download My Resume</a>
+          <a class="download-btn" href="./assets/David%20Sanchez_Resume_UPDATE.docx" download="David_Sanchez_Resume.docx">Download David's Resume</a>
         </section>
 
         <section id="contact" class="card reveal delay-2">
@@ -230,6 +247,9 @@
         </section>
 
       </main>
+      <footer class="site-footer">
+        <p>&copy; 2026 David Sanchez &mdash; <a href="#top">Back to top &uarr;</a></p>
+      </footer>
     </div>
     <script src="./site.js"></script>
   </body>
