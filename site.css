@@ -554,6 +554,61 @@ body.light-theme .linkedin-url {
   color: #94a3b8;
 }
 
+.prior-roles {
+  margin-top: 1rem;
+}
+
+.subsection-title {
+  margin: 0 0 0.55rem;
+  color: #e2e8f0;
+  font-size: 0.98rem;
+}
+
+.role-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.role-list li {
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #0f172a;
+  padding: 0.6rem 0.7rem;
+}
+
+.role-name {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.role-meta {
+  margin: 0.2rem 0 0;
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+.year-subheading {
+  margin: 0.18rem 0 0;
+  color: #94a3b8;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-title {
+  margin: 0.22rem 0 0;
+  color: #60a5fa;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 .site-footer {
   margin-top: 2rem;
   padding: 1rem 0 0.5rem;
@@ -748,6 +803,25 @@ body.light-theme .stat-num {
 
 body.light-theme .stat-label {
   color: #64748b;
+}
+
+body.light-theme .subsection-title,
+body.light-theme .role-name {
+  color: #0f172a;
+}
+
+body.light-theme .role-list li {
+  background: #f4f8ff;
+  border-color: #c6d3e4;
+}
+
+body.light-theme .role-meta,
+body.light-theme .year-subheading {
+  color: #64748b;
+}
+
+body.light-theme .project-title {
+  color: #1d4ed8;
 }
 
 body.light-theme .site-footer {
