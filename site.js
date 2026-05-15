@@ -51,4 +51,47 @@
       });
     });
   });
+
+  var companyGroups = document.querySelectorAll("#accomplishments .company-group");
+
+  function setCompanyState(group, isExpanded) {
+    var content = group.querySelector(":scope > .year-groups");
+    var heading = group.querySelector(":scope > .company-heading");
+    if (!content || !heading) {
+      return;
+    }
+    content.hidden = !isExpanded;
+    group.classList.toggle("expanded", isExpanded);
+    heading.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+  }
+
+  companyGroups.forEach(function (group) {
+    var content = group.querySelector(":scope > .year-groups");
+    var heading = group.querySelector(":scope > .company-heading");
+    if (!content || !heading) {
+      return;
+    }
+
+    heading.setAttribute("role", "button");
+    heading.setAttribute("tabindex", "0");
+    setCompanyState(group, false);
+
+    function onActivate() {
+      var willExpand = !group.classList.contains("expanded");
+      companyGroups.forEach(function (otherGroup) {
+        if (otherGroup !== group) {
+          setCompanyState(otherGroup, false);
+        }
+      });
+      setCompanyState(group, willExpand);
+    }
+
+    heading.addEventListener("click", onActivate);
+    heading.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        onActivate();
+      }
+    });
+  });
 })();
