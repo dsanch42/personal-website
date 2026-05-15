@@ -54,20 +54,29 @@
 
   var companyGroups = document.querySelectorAll("#accomplishments .company-group");
 
+  function getDirectChildByClass(parent, className) {
+    var children = parent.children;
+    for (var i = 0; i < children.length; i++) {
+      if (children[i].classList && children[i].classList.contains(className)) {
+        return children[i];
+      }
+    }
+    return null;
+  }
+
   function setCompanyState(group, isExpanded) {
-    var content = group.querySelector(":scope > .year-groups");
-    var heading = group.querySelector(":scope > .company-heading");
+    var content = getDirectChildByClass(group, "year-groups");
+    var heading = getDirectChildByClass(group, "company-heading");
     if (!content || !heading) {
       return;
     }
-    content.hidden = !isExpanded;
     group.classList.toggle("expanded", isExpanded);
     heading.setAttribute("aria-expanded", isExpanded ? "true" : "false");
   }
 
   companyGroups.forEach(function (group) {
-    var content = group.querySelector(":scope > .year-groups");
-    var heading = group.querySelector(":scope > .company-heading");
+    var content = getDirectChildByClass(group, "year-groups");
+    var heading = getDirectChildByClass(group, "company-heading");
     if (!content || !heading) {
       return;
     }

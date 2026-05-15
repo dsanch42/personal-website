@@ -343,6 +343,11 @@ button:hover,
 
 .company-group .year-groups {
   margin-top: 0.55rem;
+  display: none;
+}
+
+.company-group.expanded .year-groups {
+  display: grid;
 }
 
 .company-heading {
