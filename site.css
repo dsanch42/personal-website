@@ -666,6 +666,24 @@ body.light-theme .site-footer a:hover {
   color: #0f172a;
 }
 
+body.light-theme .experience-list li {
+  background: #f4f8ff;
+  border-color: #c6d3e4;
+}
+
+body.light-theme .exp-title {
+  color: #0f172a;
+}
+
+body.light-theme .exp-company,
+body.light-theme .exp-desc {
+  color: #475569;
+}
+
+body.light-theme .exp-dates {
+  color: #1d4ed8;
+}
+
 @keyframes rise {
   from {
     transform: translateY(10px);
