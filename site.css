@@ -332,7 +332,34 @@ button:hover,
   border: 1px solid #334155;
   border-radius: 10px;
   background: #0f172a;
+}
+
+.year-summary {
+  list-style: none;
+  cursor: pointer;
   padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.year-summary::-webkit-details-marker {
+  display: none;
+}
+
+.year-summary::after {
+  content: "+";
+  color: #94a3b8;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.year-group[open] .year-summary::after {
+  content: "-";
+}
+
+.year-group .year-projects {
+  padding: 0 0.8rem 0.8rem;
 }
 
 .year-heading {
@@ -344,7 +371,7 @@ button:hover,
 
 .year-projects {
   list-style: none;
-  margin: 0.65rem 0 0;
+  margin: 0;
   padding: 0;
   display: grid;
   gap: 0.5rem;
@@ -661,6 +688,10 @@ body.light-theme .achievement-list li {
 body.light-theme .year-group {
   background: #f4f8ff;
   border-color: #c6d3e4;
+}
+
+body.light-theme .year-summary::after {
+  color: #64748b;
 }
 
 body.light-theme .year-heading {
